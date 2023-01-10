@@ -27,10 +27,12 @@ const structure = (S: StructureBuilder, {currentUser}: ConfigContext) => {
     ])
 }
 
-const defaultDocumentNode = (S: StructureBuilder, {currentUser}: ConfigContext) => {
+const defaultDocumentNode = (S: StructureBuilder, {currentUser, schemaType}: any) => {
   const admin = currentUser?.roles.find((user: any) => user.name === 'administrator')
   if (admin) {
-    return S.document().views([S.view.form(), S.view.component(Preview).title('Preview')])
+    if (schemaType === 'menu') {
+      return S.document().views([S.view.form(), S.view.component(Preview).title('Preview')])
+    }
   }
   return S.document().views([S.view.form()])
 }
