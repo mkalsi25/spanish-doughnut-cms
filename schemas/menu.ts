@@ -1,4 +1,5 @@
 import {defineField, defineType} from 'sanity'
+
 import RecipeIcon from '../icons/RecipeIcon'
 
 export default defineType({
