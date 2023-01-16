@@ -10,7 +10,7 @@
     "build": "sanity build",
     "live": "sanity deploy",
     "graphql": "sanity graphql deploy",
-    "deploy": "npm run graphql --force && npm run live"
+    "deploy": "npm run graphql && npm run live"
   },
   "keywords": [
     "sanity"
