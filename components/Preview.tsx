@@ -5,7 +5,7 @@ export default function Preview({document: {published}, documentId}: any) {
     return (
       <Stack padding={4}>
         <pre>
-          <code>{JSON.stringify(published)}</code>
+          <code>{JSON.stringify(published, null, 2)}</code>
         </pre>
       </Stack>
     )

@@ -33,10 +33,15 @@ export default defineType({
       initialValue: 0,
     }),
     defineField({
-      name: 'category',
+      name: 'categories',
       title: 'Category',
       type: 'array',
-      of: [{type: 'category'}],
+      of: [
+        {
+          type: 'reference',
+          to: [{type: 'category'}],
+        },
+      ],
     }),
     defineField({
       name: 'status',
